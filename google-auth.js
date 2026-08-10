@@ -42,6 +42,7 @@ async function loadProfile(user){
 
 function releaseApp(user, profile){
   window.qapGoogleUser = {uid:user.uid,email:profile.email,nome:profile.nome,perfil:profile.perfil};
+  window.qapGetToken = () => user.getIdToken();
   window.qapRegistrarAuditoria = async ({acao,lancamentoId,antes=null,depois=null}) => {
     const keys = new Set([...Object.keys(antes||{}),...Object.keys(depois||{})]);
     const camposAlterados = [...keys].filter(key=>JSON.stringify(antes?.[key])!==JSON.stringify(depois?.[key]));

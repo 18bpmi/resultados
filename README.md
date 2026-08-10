@@ -4,7 +4,7 @@ Versão do `qap18` com autenticação Google, gestão de usuários e trilha de a
 
 ## Funcionamento
 
-- A autenticação e os perfis utilizam o projeto Firebase `qap2cia-bd58b`.
+- A autenticação, os perfis, o QAP e a auditoria utilizam o projeto Firebase `qap18-ac50d`.
 - Os lançamentos continuam sendo gravados nos bancos originais `qap18-ac50d` e `resultados-1c75f`.
 - Não há migração nem exclusão dos dados já existentes.
 - Cada novo lançamento recebe UID, nome e Gmail do responsável.
@@ -16,7 +16,7 @@ Versão do `qap18` com autenticação Google, gestão de usuários e trilha de a
 
 1. Em **Authentication > Método de login**, mantenha o provedor **Google** ativado.
 2. Em **Authentication > Configurações > Domínios autorizados**, adicione `fenille.github.io` se ainda não estiver na lista.
-3. No projeto `qap2cia-bd58b`, abra **Realtime Database > Regras**.
+3. No projeto `qap18-ac50d`, abra **Realtime Database > Regras**.
 4. Substitua as regras pelo conteúdo de `database.rules.json` e clique em **Publicar**.
 
 ## Publicação

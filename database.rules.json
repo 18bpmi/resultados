@@ -21,7 +21,7 @@
       ".read": "auth != null && root.child('usuarios').child(auth.uid).child('ativo').val() === true",
       "$id": {
         ".write": "auth != null && root.child('usuarios').child(auth.uid).child('ativo').val() === true",
-        "createdPorUid": { ".validate": "data.exists() || newData.val() === auth.uid" },
+        "criadoPorUid": { ".validate": "data.parent().exists() || newData.val() === auth.uid" },
         "$other": { ".validate": true }
       }
     },

@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
 import { getDatabase, ref, get, set, update, push } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
-import { firebaseConfig } from "./firebase-config.js?v=20260810-1";
+import { firebaseConfig } from "./firebase-config.js?v=20260812-1";
 
 const ADMIN_EMAILS = ["rpfenille@gmail.com", "18bpmip3@gmail.com"];
 const isPermanentAdmin = email => ADMIN_EMAILS.includes(String(email || "").toLowerCase());

@@ -1,6 +1,6 @@
 export const firebaseConfig = {
   apiKey: "AIzaSyA7m138TIE_HuVdwylMHIxvzDHsnMOnzWA",
-  authDomain: "qap18-ac50d.firebaseapp.com",
+  authDomain: "qap18-ac50d.web.app",
   databaseURL: "https://qap18-ac50d-default-rtdb.firebaseio.com",
   projectId: "qap18-ac50d",
   storageBucket: "qap18-ac50d.firebasestorage.app",

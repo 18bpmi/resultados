@@ -63,7 +63,7 @@ function renderAuditoria(){
 function exportarCSV(){
   const q=v=>`"${String(v??"").replace(/"/g,'""')}"`;
   const linhas=[["Data/hora","Nome","Gmail","Ação","Lançamento","Campos alterados","Dados anteriores","Dados novos"],...filtrados().map(e=>[e.dataHora,e.usuarioNome,e.usuarioEmail,e.acao,e.lancamentoId,(e.camposAlterados||[]).join(" | "),JSON.stringify(e.dadosAnteriores),JSON.stringify(e.dadosNovos)])];
-  const blob=new Blob(["\ufeff"+linhas.map(l=>l.map(q).join(";")).join("\r\n")],{type:"text/csv;charset=utf-8"}); const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=`auditoria-qap-${new Date().toISOString().slice(0,10)}.csv`; a.click(); URL.revokeObjectURL(a.href);
+  const blob=new Blob(["\ufeff"+linhas.map(l=>l.map(q).join(";")).join("\r\n")],{type:"text/csv;charset=utf-8"}); const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=`auditoria-qap-${new Intl.DateTimeFormat('en-CA',{timeZone:'America/Sao_Paulo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date())}.csv`; a.click(); URL.revokeObjectURL(a.href);
 }
 
 [$("filtroEmail"),$("filtroAcao"),$("filtroInicio"),$("filtroFim")].forEach(el=>el.addEventListener("input",renderAuditoria));
